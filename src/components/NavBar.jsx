@@ -25,7 +25,7 @@ const NavBar = () => {
 }
 
 const onAdd = ()=>{
-  alert("Agregado al carrito")
+  alert("Agregaste " +(carrito) +" productos al carrito")
 }
   return (
 
@@ -33,7 +33,7 @@ const onAdd = ()=>{
     <ChakraProvider>
       <nav>
       <h2>Bolt</h2>
-      <Breadcrumb separator='-'>
+      <Breadcrumb separator='<'>
   <BreadcrumbItem>
     <BreadcrumbLink href='#'>Home</BreadcrumbLink>
   </BreadcrumbItem>
