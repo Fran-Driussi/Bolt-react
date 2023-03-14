@@ -3,18 +3,26 @@ import './App.css'
 import CartWidget from './components/CartWidget'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
-import Data from "./data.json"
+import Data from "./Data.json"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 
 const App = () => {
 
-  return (
-    <>
-    
-    <NavBar />
-    <ItemListContainer greeting ={Data}/>
    
-    </>
+  
+  
+
+  return (
+    <BrowserRouter>
+      <NavBar />
+
+      <ItemListContainer  />
+
+    </BrowserRouter>
+
+
   )
 }
 

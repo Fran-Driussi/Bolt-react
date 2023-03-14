@@ -13,20 +13,7 @@ import {
 const NavBar = () => {
   const [carrito, setCarrito]= useState(0)
 
-  const restar =() =>{
-  if (carrito < 1){
-    alert("No hay mas productos")
-  }
-  else{
-    
-      setCarrito (carrito - 1);
-    
-  }
-}
 
-const onAdd = ()=>{
-  alert("Agregaste " +(carrito) +" productos al carrito")
-}
   return (
 
     <>
@@ -47,9 +34,6 @@ const onAdd = ()=>{
   </BreadcrumbItem>
   <BreadcrumbItem className='nav'>
   <BreadcrumbLink><CartWidget numero={carrito} /></BreadcrumbLink>
-  <button onClick={()=> setCarrito(carrito + 1)}>Sumar producto </button>
-          <button onClick={restar}>Eliminar producto</button>
-          <button onClick={onAdd}>Agregar al carrito</button>
   </BreadcrumbItem>
 </Breadcrumb>
       </nav>
