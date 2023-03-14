@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer'
 import Data from "./Data.json"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/ItemDetailContainer'
+import Welcome from './components/Welcome'
 
 
 const App = () => {
@@ -18,7 +19,16 @@ const App = () => {
     <BrowserRouter>
       <NavBar />
 
-      <ItemListContainer  />
+      <Routes>
+          <Route exact path="/" element={<Welcome />} />
+          <Route exact path="/catalogue" element={<ItemListContainer />} />
+          <Route
+            exact
+            path="/category/:category"
+            element={<ItemListContainer />}
+          />
+          <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
 
     </BrowserRouter>
 

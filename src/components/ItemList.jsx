@@ -7,6 +7,7 @@ const ItemList = ({products}) => {
   return (
     
     <div>
+      <Container className='main-catalogue'>
       {products.map(prod =>(
              <Item
              key={prod.id}
@@ -15,10 +16,12 @@ const ItemList = ({products}) => {
              price={prod.precio}
              stock={prod.stock}
              image={prod.image}
+             category={prod.category}
 
            />
      
          ))}
+         </Container>
       </div>
     
   )
