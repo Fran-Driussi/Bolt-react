@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-  const {category} = useParams();
+  const {id} = useParams();
   const [products, setProducts] =useState([
     {
       "id": 1,
@@ -62,9 +62,10 @@ const ItemDetailContainer = () => {
     },
     
   ])
+  const idFilter = products.filter((prod) => prod.id == id)
   return (
     <>
-    <ItemDetail products={products}/>
+    <ItemDetail products={idFilter}/>
     </>
   )
 }

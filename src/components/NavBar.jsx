@@ -2,7 +2,7 @@
 import CartWidget from './CartWidget'
 import { Link } from "react-router-dom";
 import { useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 import {
   Flex,
   Box,
@@ -20,7 +20,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 
 const NavBar = () => {
-  const [carrito, setCarrito]= useState(0)
+  
 
 
   return (
@@ -86,10 +86,32 @@ const NavBar = () => {
                 </Link>
               </MenuList>
             </Menu>
+            <Menu>
+              <Link to={"/contact"}>
+                <MenuButton
+                  as={Button}
+                  borderRadius='md'
+                borderWidth='1px'
+                _hover={{ bg: 'gray.400' }}
+                _expanded={{ bg: 'blue.400' }}
+                _focus={{ boxShadow: 'inline' }}
+                  size="lg"
+                  variant="outline"
+                  colorScheme=""
+                  m="5"
+                >
+                  Contact
+                </MenuButton>
+              </Link>
+            </Menu>
           </Box>
           <Spacer>
           <Box p="10"  h="100">
-              <CartWidget />
+          <Link to={"/cart"}>
+          <CartWidget />
+          </Link>
+              
+              
           </Box>
           </Spacer>
           

@@ -7,6 +7,8 @@ import Data from "./Data.json"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/ItemDetailContainer'
 import Welcome from './components/Welcome'
+import Contact from './components/Contact'
+import Cart from './components/Cart'
 
 
 const App = () => {
@@ -28,6 +30,8 @@ const App = () => {
             element={<ItemListContainer />}
           />
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
 
     </BrowserRouter>
