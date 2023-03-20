@@ -14,28 +14,12 @@ import {
 } from "@chakra-ui/react";
 import { ChakraProvider } from '@chakra-ui/react';
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import ItemCount from './ItemCount';
 const ItemDetail = ({ products }) => {
   const { id } = useParams();
   const prodFilter = products.filter((prod) => prod.id == id);
 
-  const [carrito, setCarrito] = useState(0)
 
-  const restar = () => {
-    if (carrito < 1) {
-      alert("No hay mas productos")
-    }
-    else {
-
-      setCarrito(carrito - 1);
-
-    }
-  }
-
-  const onAdd = () => {
-    alert("Agregado al carrito")
-  }
   return (
     <ChakraProvider>
       <div>
@@ -74,16 +58,14 @@ const ItemDetail = ({ products }) => {
                 </CardBody>
 
                 <CardFooter>
-                  <Box className='count'>
-                    <Button onClick={() => setCarrito(carrito + 1)}>+</Button>
-                    <Text>{carrito}</Text>
-                    <Button onClick={restar}>-</Button>
-                    <Button variant='solid' colorScheme='blue' onClick={onAdd}>
-                      <Link to={"/cart"}> Agregar al carrito</Link></Button>
-                  </Box>
-                  
-                  
-                  
+                  <ItemCount id={prod.id}
+                    name={prod.name}
+                    price={prod.precio}
+                    stock={prod.stock} />
+
+
+
+
                 </CardFooter>
               </Stack>
             </Card>

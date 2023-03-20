@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
       "precio": "$155",
       "stock": 10,
       "category": "Nike",
-      "image": "https://lh3.googleusercontent.com/s9evJcZ_yvEp2dj8Cmpy2QoS-mFVxbFArl-ErvZ5jq-KpdLLP08CBF3e2AmhCmCUhUvE9VVr4YCYjmzVsGhoKslJWkJfOwc_kiPVmYM",
+      "image": "https://lh3.googleusercontent.com/TpnyCSeyEUnmQKT8dY4xdFM-k4Xd4UsX4AAHV8o1mgMqNppqeqafvf5Q1Vb_Jg_XHnGgSPcv9iAvh6P-WSJz5sE6QnDZzjjxrZgopuA",
       "description": "El Nike Air Force 1 Low Puerto Rico 2022 tiene una suela básica y amortiguación, lo que lo convierte en un par de zapatos ideales para usar todos los días. Presenta una base azul marino oscuro."
     },
     {

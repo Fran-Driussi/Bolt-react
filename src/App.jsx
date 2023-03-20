@@ -1,24 +1,22 @@
-import { Component, useState } from 'react'
 import './App.css'
-import CartWidget from './components/CartWidget'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
-import Data from "./Data.json"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ItemDetailContainer from './components/ItemDetailContainer'
 import Welcome from './components/Welcome'
 import Contact from './components/Contact'
-import Cart from './components/Cart'
+import Cart from './components/Cart';
+import CartContext from './context/CartContext';
+
+
+
 
 
 const App = () => {
-
-   
-  
-  
-
   return (
+    <CartContext>
     <BrowserRouter>
+    
       <NavBar />
 
       <Routes>
@@ -33,8 +31,11 @@ const App = () => {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
-
+        
+        
     </BrowserRouter>
+    </CartContext>
+   
 
 
   )
