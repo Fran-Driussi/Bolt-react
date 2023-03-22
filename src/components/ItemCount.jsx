@@ -3,14 +3,15 @@ import {
   Text,
   Button,
   Box,
-  Alert,
-  AlertIcon
+  Tooltip,
+  IconButton
 } from "@chakra-ui/react";
+import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { ChakraProvider } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { CartContext } from '../context/CartContext';
-import Cart from './Cart';
+
 
 const ItemCount = ({ id, name, price, stock }) => {
   const { cart, setCart } = useContext(CartContext);
@@ -61,11 +62,32 @@ const ItemCount = ({ id, name, price, stock }) => {
     <div>
       <ChakraProvider>
         <Box className='count'>
-          <Button onClick={restar}>-</Button>
+          {count >= 1?(
+            <Button onClick={restar}>-</Button>
+          ): (
+            <Tooltip placement= "bottom" label="Disabled" >
+              <IconButton icon={<MinusIcon/>} isDisabled/>
+            </Tooltip>
+          ) }
+          
           <Text>{count}</Text>
-          <Button onClick={sumar}>+</Button>
-          <Button variant='solid' colorScheme='blue' onClick={onAdd}>
+          {count<stock?(
+            <Button onClick={sumar}>+</Button>
+          ):(
+            <Tooltip placement= "bottom" label="Maximo stock alcanzado">
+              <IconButton icon={<AddIcon/>} isDisabled/>
+            </Tooltip>
+          )}
+          
+          {count > 0 ?(
+            <Button variant='solid' bg="teal.100" onClick={onAdd}>
             <Link to={"/cart"}> Agregar al carrito: {count} </Link></Button>
+          ):(
+            <Tooltip placement= "bottom" label="Ningun Producto seleccionado">
+              <IconButton icon={<AddIcon/>} isDisabled/>
+            </Tooltip>
+          )}
+          
         </Box>
       </ChakraProvider>
        

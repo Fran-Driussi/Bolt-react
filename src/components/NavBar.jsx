@@ -28,8 +28,8 @@ const NavBar = () => {
 
     <>
       <ChakraProvider>
-        <Container maxW="150rem" bg="gray.400" color="">
-          <Flex alignItems="center" gap="2">
+        <Container maxW="150rem" bg="gray.400" color=""  >
+          <Flex alignItems="center"  gap="5">
             <Link to={"/"}>
               <Avatar
                 size="lg"
@@ -41,21 +41,21 @@ const NavBar = () => {
                 <Link to={"/"}>Bolt</Link>
               </Heading>
             </Box>
-
-            <Box>
-              <Menu>
+            
+            
+            
+            <Box > 
+              <Menu >
                 <Link to={"/catalogue"}>
                   <MenuButton
                     as={Button}
-                    borderRadius='lg'
-                    borderWidth='1.5px'
-                    _hover={{ bg: 'gray.400' }}
-                    _expanded={{ bg: 'blue.400' }}
-                    _focus={{ boxShadow: 'inline' }}
+                    borderRadius='3xl'
+                    _expanded={{ bg: 'gray.200' }}
                     size="lg"
-                    variant="outline"
+                    color="black"
                     colorScheme=""
                     m="5"
+                    className='nav-bar'
                   >
                     Catalogue
                   </MenuButton>
@@ -64,17 +64,14 @@ const NavBar = () => {
               <Menu>
                 <MenuButton
                   as={Button}
-                  transition='all 0.2s'
-                  borderRadius='lg'
-                  borderWidth='1.5px'
-                  _hover={{ bg: 'gray.400' }}
-                  _expanded={{ bg: 'blue.400' }}
-                  _focus={{ boxShadow: 'inline' }}
+                  borderRadius='3xl'
+                  _expanded={{ bg: 'gray.200' }}
                   size="lg"
-                  variant="outline"
+                  color="black"
                   colorScheme=""
                   rightIcon={<ChevronDownIcon />}
                   m="5"
+                  className='nav-bar'
                 >
                   Categories
                 </MenuButton>
@@ -91,15 +88,13 @@ const NavBar = () => {
                 <Link to={"/contact"}>
                   <MenuButton
                     as={Button}
-                    borderRadius='lg'
-                    borderWidth='1.5px'
-                    _hover={{ bg: 'gray.400' }}
-                    _expanded={{ bg: 'blue.400' }}
-                    _focus={{ boxShadow: 'inline' }}
+                    borderRadius='3xl'
+                    _expanded={{ bg: 'gray.200' }}
                     size="lg"
-                    variant="outline"
+                    color="black"
                     colorScheme=""
                     m="5"
+                    className='nav-bar'
                   >
                     Contact
                   </MenuButton>
@@ -107,15 +102,16 @@ const NavBar = () => {
               </Menu>
             </Box>
             
-              <Box p="6"  >  
+            
+              <Box p="6" >  
                 <Link to={"/cart"}>
-                  <CartWidget />
+                  <CartWidget  />
                 </Link>
               </Box>
-            
+              </Flex>
 
 
-          </Flex>
+          
         </Container>
 
       </ChakraProvider>

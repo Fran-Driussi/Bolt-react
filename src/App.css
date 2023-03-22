@@ -34,5 +34,38 @@ form{
   flex-direction: row;
   gap: 10px;
 }
+.cartNull{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem;
+  font-size: x-large;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+.main-catalogue{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem;
+  flex-wrap: wrap;
+  gap: 100px;
+  
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.spinner{
+  display: grid;
+  place-items: center;
+  margin-top: 300px;
+  gap: 10px;
+  
+}
+.nav-bar:hover{
+  box-shadow:  10px 8px 25px 0 rgba(0, 0, 0, 0.2); 
+}
+
 
 

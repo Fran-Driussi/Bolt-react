@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     {
       "id": 1,
       "name": "Nike Air Force 1 low",
-      "precio": "$155",
+      "precio": 155,
       "stock": 10,
       "category": "Nike",
       "image": "https://lh3.googleusercontent.com/TpnyCSeyEUnmQKT8dY4xdFM-k4Xd4UsX4AAHV8o1mgMqNppqeqafvf5Q1Vb_Jg_XHnGgSPcv9iAvh6P-WSJz5sE6QnDZzjjxrZgopuA",
@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
     {
       "id": 2,
       "name": "Jordan 1 Retro High OG",
-      "precio": "$100",
+      "precio": 100,
       "stock": 15,
       "category": "Otro",
       "image": "https://lh3.googleusercontent.com/P-MW1ge-7XLpTf55jspk-3c-qfWvzuvh2PMEVpgg-51tXj-Ka2TEI0Yrvg9naydM_v0Jfuy0joxxjszokBBikm9rZ33pr_-BtKboXo0",
@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     {
       "id": 3,
       "name": "Adidas yeezy 700 V3",
-      "precio": "$1.000",
+      "precio": 1000,
       "stock": 20,
       "category": "Otro",
       "image":"https://lh3.googleusercontent.com/4DE_t2vdlAp3uR4nPtYk5XUa_XRLulxmN9a81AYM0AAUgBB7qaMDHKd_uYJCdPNDLiT8Fptgm8X5JFqVse_QMXnedKy7vcnA0l3hKmM",
@@ -36,7 +36,7 @@ const ItemDetailContainer = () => {
     {
       "id": 4,
       "name": "Crocs Classic Clog L4",
-      "precio": "$133",
+      "precio": 133,
       "stock": 3,
       "category": "Otro",
       "image":"https://lh3.googleusercontent.com/njxMZ9sZhBgEKx-JrcqR0EkN-alvbQ3iqpGrNVAjU8lBtpWCtiksyBXdzK9pQG9-a0BXvRoSZ3yr0-l0Vx1FMoMTUWG80YQOsth5OL6g",
@@ -45,7 +45,7 @@ const ItemDetailContainer = () => {
     {
       "id": 5,
       "name": "Nike SB Dunk Low",
-      "precio": "$840",
+      "precio": 840,
       "stock": 17,
       "category": "Nike",
       "image":"https://lh3.googleusercontent.com/LMksTOCuLUXpJayyqtNWBMviAP6MHVSD2xdV0F4-IVflhcbAu7MFSzx5m-JWAHqRaLjJXamUyQd5Kz9lStyOZZy7kBoRUZDYtWa5IVin",
@@ -54,7 +54,7 @@ const ItemDetailContainer = () => {
     {
       "id": 6,
       "name": "Nike Air Force Off-White",
-      "precio": "$4.000",
+      "precio": 4000 ,
       "stock": 1,
       "category": "Nike",
       "image":"https://lh3.googleusercontent.com/jhch_NoDhkUH3pbThQKvja5QjpvfZ5EQLOpS0-nZDjSCVgIoNuL8zhgpi0ZipKJiCV1X3cJSqBr2tHz-8QAAR2oTRjQ9AKZcQT_tbKSm",

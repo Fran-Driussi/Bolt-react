@@ -21,7 +21,7 @@ const Item = ({ id, name, price, stock, image, category }) => {
   return (
     <>
 <ChakraProvider>
-      <div key={id}>
+      <div key={id} className='card'>
       <Card maxW='sm'>
   <CardBody>
     <Image
@@ -31,21 +31,21 @@ const Item = ({ id, name, price, stock, image, category }) => {
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>{name}</Heading>
-      <Text>
+      <Text color="orange.300">
         Stock: {stock}
       </Text>
-      <Text>
+      <Text color="blue.400">
         Category: {category}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        {price}
+        ${price}
       </Text>
     </Stack>
   </CardBody>
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
+      <Button variant='solid'    bg="teal.100">
       <Link to={`/item/${id}`}>Details</Link>
       </Button>
      

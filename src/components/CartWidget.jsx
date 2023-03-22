@@ -14,11 +14,16 @@ const cantidad = cart.reduce((acc, curr) =>{
 
   return (
     <div >
-      <Button variant="outline" colorScheme="" size="lg"  >
+      <Button variant="outline" colorScheme="" size="lg" border="none" >
       <span className="material-symbols-outlined">
         shopping_cart
       </span>
-      <span>{cantidad}</span>
+      {cart !=0? (
+        <span>{cantidad}</span>
+      ):(
+        <p></p>
+      )}
+      
       </Button>
     </div>
   )

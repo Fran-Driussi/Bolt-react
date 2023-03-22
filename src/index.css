@@ -1,8 +1,0 @@
-.main-catalogue{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 5rem;
-    flex-wrap: wrap;
-    gap: 100px;
-}
