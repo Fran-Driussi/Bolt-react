@@ -13,6 +13,7 @@
 
 
 ## 2. Librerías/tecnologías usadas
+- [Vite](https://vitejs.dev/guide/)
 - [Firebase](https://firebase.google.com/?hl=es)
 - [Chakra ui](https://chakra-ui.com/)
 - [React Router](https://reactrouter.com/)
