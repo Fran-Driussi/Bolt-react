@@ -14,7 +14,7 @@ import { CartContext } from '../context/CartContext';
 
 
 const ItemCount = ({ id, name, price, stock }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, addToCart, setCart } = useContext(CartContext);
   const [count, setCount] = useState(0);
 
 
@@ -39,23 +39,17 @@ const ItemCount = ({ id, name, price, stock }) => {
     }
   }
 
-  const onAdd = () => {
-    setCart((items) => {
-      const foundItem = items.find((item) => item.id === id);
-      if (foundItem) {
-        return items.map((item) => {
-          if (item.id === id) {
-            return { ...item, cantidad: item.cantidad + count };
-          }
-          else {
-            return item;
-          }
-        })
-      } else {
-        return [...items, { id, cantidad: count, price, name }]
-      }
-    })
-  }
+
+  const handleAddToCart = () => {
+    const prod = {
+        id,
+        name,
+        price,
+        cantidad:count
+    }
+
+    addToCart(prod);
+}
 
 
   return (
@@ -80,7 +74,7 @@ const ItemCount = ({ id, name, price, stock }) => {
           )}
           
           {count > 0 ?(
-            <Button variant='solid' bg="teal.100" onClick={onAdd}>
+            <Button variant='solid' bg="teal.100" onClick={handleAddToCart}>
             <Link to={"/cart"}> Agregar al carrito: {count} </Link></Button>
           ):(
             <Tooltip placement= "bottom" label="Ningun Producto seleccionado">

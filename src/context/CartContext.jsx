@@ -3,20 +3,26 @@ import {createContext,useState} from 'react';
 export const CartContext = createContext();
 
 const cartContext = ({children}) => {
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
 
-    const increment = () => {
-        setCounter(counter + 1);
+    const addToCart = (prod) => {
+      setCart([...cart, prod]);
+  }
+
+    const removeItem = (id)=>{
+      const deleteItem = cart.filter(prod => prod.id !== id);
+      setCart([...deleteItem]);
     }
 
-    const decrement = () => {
-        setCounter(counter - 1);
+    const nullCart = () =>{
+      setCart([]); 
     }
-    const reset = () => {
-        setCounter(0);
-    }
+    const totalCart = () => {
+      return cart.reduce((total, prod) => total + (prod.price * prod.cantidad), 0);
+  }
+  
   return (
-    <CartContext.Provider value={{cart, setCart}}>
+    <CartContext.Provider value={{cart, removeItem, totalCart,nullCart, addToCart,setCart}}>
         {children}
         </CartContext.Provider>
   )
