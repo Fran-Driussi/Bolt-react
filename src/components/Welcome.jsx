@@ -15,7 +15,7 @@ const Welcome = () => {
     <div >
       {loading ?(
         <Center>
-        <Box boxSize="xl"
+        <Box boxSize="xl" 
        >
 
           <Image
@@ -27,12 +27,9 @@ const Welcome = () => {
       </Center>
       ):(
         <ChakraProvider>
-        <div className='spinner' >
-        <CircularProgress isIndeterminate size='100px' thickness='10px' color='gray.400' />
-          <Text>
-            Loading...
-          </Text>
-      </div>
+          <div className='spinner'>
+        <div className=' loader' > </div>
+        </div>
       </ChakraProvider>
       )}
       

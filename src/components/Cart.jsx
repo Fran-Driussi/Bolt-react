@@ -33,12 +33,13 @@ const Cart = () => {
               <span >El carrito esta vacio</span>
               <Menu >
                 <Link to={"/catalogue"}>
-                  <MenuButton
+                  <button
                     as={Button}
                     borderRadius='lg'
+                    className='btn'
                   >
                     Lista de productos
-                  </MenuButton>
+                  </button>
                 </Link>
               </Menu>
             </div>

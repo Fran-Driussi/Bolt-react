@@ -8,12 +8,6 @@ import Contact from './components/Contact'
 import Cart from './components/Cart';
 import CartContext from './context/CartContext';
 
-
-
-
-
-
-
 const App = () => {
 
   return (

@@ -84,22 +84,7 @@ const NavBar = () => {
                   </Link>
                 </MenuList>
               </Menu>
-              <Menu>
-                <Link to={"/contact"}>
-                  <MenuButton
-                    as={Button}
-                    borderRadius='3xl'
-                    _expanded={{ bg: 'gray.200' }}
-                    size="lg"
-                    color="black"
-                    colorScheme=""
-                    m="5"
-                    className='nav-bar'
-                  >
-                    Contact
-                  </MenuButton>
-                </Link>
-              </Menu>
+             
             </Box>
             
             

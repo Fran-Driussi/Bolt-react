@@ -74,8 +74,8 @@ const ItemCount = ({ id, name, price, stock }) => {
           )}
           
           {count > 0 ?(
-            <Button variant='solid' bg="teal.100" onClick={handleAddToCart}>
-            <Link to={"/cart"}> Agregar al carrito: {count} </Link></Button>
+            <button className='button' onClick={handleAddToCart}>
+            <Link to={"/cart"}> Agregar al carrito: {count} </Link></button>
           ):(
             <Tooltip placement= "bottom" label="Ningun Producto seleccionado">
               <IconButton icon={<AddIcon/>} isDisabled/>

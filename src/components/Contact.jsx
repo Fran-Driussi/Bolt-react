@@ -21,39 +21,65 @@ const Contact = () => {
 
     }
     return (
-        <div>
-            <ChakraProvider>
-                <form onSubmit={handleSubmit} >
+        <>
+          <form className="form">
+  <header>
+    Credit card information
+  <span className="message">Fill the form to continue.</span>
+  </header>
+  <label>
+    <span>Card Number</span>
+    <input placeholder="Type your card number" className="input" type="number" required=""/>
+  </label>
+  <label>
+    <span>Name on card</span>
+    <input placeholder="Type your name as appear on card" className="input" type="text" required=""/>
+  </label>
+  <fieldset>
+    <label className="sm">
+    <span>Exp. Month</span>
+    <div className="custom-select">
+    <select className="input" type="select" required="">
+      <option></option>
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>Dicember</option>
+    </select>
+    </div>
+  </label>
+  <label className="sm">
+    <span>Exp. Year </span>
+    <div className="custom-select">
+    <select className="input" type="select" required="">
+      <option></option>
+      <option>2023</option>
+      <option>2024</option>
+      <option>2025</option>
+      <option>2026</option>
 
-                    <FormControl isRequired>
-                        <FormLabel>First name</FormLabel>
-                        <Input placeholder='First name'  onChange={(e)=> setNombre(e.target.value)}/>
-                    </FormControl>
-                    <FormControl isRequired>
-                        <FormLabel>Last name</FormLabel>
-                        <Input placeholder='Last name'  />
-                    </FormControl>
-                    <FormControl isRequired>
-                        <FormLabel>Email address</FormLabel>
-                        <Input type='email' onChange={(e)=> setEmail(e.target.value)}/>
-                    </FormControl>
-                    <Input
-                        color='teal'
-                        placeholder='Message'
-                        _placeholder={{ color: 'inherit' }}
-                        onChange={(e)=> setMesagge(e.target.value)}
-                    />
+    </select>
+    </div>
+  </label>
+    <label className="sm">
+    <span>CW </span>   
+    <input className="input" placeholder="1234" size="4" maxlength="4" type="text" required=""/>
+  </label>
+  </fieldset>
+  <div className="submitCard">
+    <button>Complete payment</button>
+  </div>
+</form>
 
-                    <Button className='button' colorScheme='teal' type='submit' >
-                        Send
-                    </Button>
-                    
-
-
-
-                </form>
-            </ChakraProvider>
-        </div>
+        </>
     )
 }
 

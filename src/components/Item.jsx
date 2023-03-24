@@ -45,9 +45,9 @@ const Item = ({ id, name, price, stock, image, category }) => {
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid'    bg="teal.100">
+      <button  className='button' >
       <Link to={`/item/${id}`}>Details</Link>
-      </Button>
+      </button>
      
     </ButtonGroup>
   </CardFooter>
