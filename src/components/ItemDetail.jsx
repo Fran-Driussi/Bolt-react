@@ -15,11 +15,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { useParams } from "react-router-dom";
 import ItemCount from './ItemCount';
 import { useState, useEffect } from 'react';
-const ItemDetail = ({ products }) => {
-  const { id } = useParams();
-  const prodFilter = products.filter((prod) => prod.id == id);
 
-  const [loading, setLoading] = useState(false);
+
+const ItemDetail = ({ products }) => {
+  console.log(products);
+
+const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,8 +33,8 @@ const ItemDetail = ({ products }) => {
     <ChakraProvider>
       {loading ? (
         <div>
-          {products.map((prod) => (
-            <div key={prod.id}>
+          
+            <div key={id}>
 
               <Card
                 direction={{ base: 'column', sm: 'row' }}
@@ -44,33 +45,33 @@ const ItemDetail = ({ products }) => {
                 <Image
                   className='image-prod'
 
-                  src={prod.image}
+                  src={Imagen}
 
                 />
 
                 <Stack>
                   <CardBody>
-                    <Heading size='md'>{prod.name}</Heading>
+                    <Heading size='md'>{Nombre}</Heading>
 
                     <Text py='2'>
-                      {prod.description}
+                      {Descpricion}
                     </Text>
                     <Text color="blue.400" fontSize="xl">
-                      Category: {prod.category}
+                      Category: {Categoria}
                     </Text>
                     <Text color="orange.300" fontSize="xl">
-                      Stock: {prod.stock}
+                      Stock: {Stock}
                     </Text>
                     <Text color="green.600" fontSize="xl">
-                      Price: ${prod.precio}
+                      Price: ${Precio}
                     </Text>
                   </CardBody>
 
                   <CardFooter>
-                    <ItemCount id={prod.id}
-                      name={prod.name}
-                      price={prod.precio}
-                      stock={prod.stock} />
+                    <ItemCount id={id}
+                      name={Nombre}
+                      price={Precio}
+                      stock={Stock} />
 
 
 
@@ -79,7 +80,7 @@ const ItemDetail = ({ products }) => {
                 </Stack>
               </Card>
             </div>
-          ))}
+          
         </div>
       ) : (
         <div className='spinner' >

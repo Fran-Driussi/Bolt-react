@@ -37,6 +37,8 @@ const Cart = () => {
                     as={Button}
                     borderRadius='lg'
                     className='btn'
+                    
+                    
                   >
                     Lista de productos
                   </button>

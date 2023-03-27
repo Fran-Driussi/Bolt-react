@@ -10,13 +10,13 @@ const ItemList = ({ products }) => {
       <Container className='main-catalogue'>
         {products.map(prod => (
           <Item
-            key={prod.id}
+            key={prod.Nombre}
             id={prod.id}
-            name={prod.name}
-            price={prod.precio}
-            stock={prod.stock}
-            image={prod.image}
-            category={prod.category}
+            nombre={prod.Nombre}
+            precio={prod.Precio}
+            stock={prod.Stock}
+            imagen={prod.Imagen}
+            categoria={prod.Categoria}
 
           />
 

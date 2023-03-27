@@ -76,10 +76,10 @@ const NavBar = () => {
                   Categories
                 </MenuButton>
                 <MenuList className="menu-list">
-                  <Link to={`/category/${"Nike"}`}>
+                  <Link to={`/Categoria/${"Nike"}`}>
                     <MenuItem>Nike</MenuItem>
                   </Link>
-                  <Link to={`/category/${"Otro"}`}>
+                  <Link to={`/Categoria/${"Otro"}`}>
                     <MenuItem>Otro</MenuItem>
                   </Link>
                 </MenuList>

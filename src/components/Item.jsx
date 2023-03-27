@@ -17,28 +17,28 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, name, price, stock, image, category }) => {
+const Item = ({ id, nombre, precio, stock, imagen, categoria }) => {
   return (
     <>
 <ChakraProvider>
-      <div key={id} className='card'>
-      <Card maxW='sm'>
+      <div key={nombre} className='card'>
+      <Card >
   <CardBody>
     <Image
-      src={image}
+      src={imagen}
       
       borderRadius='lg'
     />
     <Stack mt='6' spacing='3'>
-      <Heading size='md'>{name}</Heading>
+      <Heading size='md'>{nombre}</Heading>
       <Text color="orange.300">
         Stock: {stock}
       </Text>
       <Text color="blue.400">
-        Category: {category}
+        Category: {categoria}
       </Text>
       <Text color='blue.600' fontSize='2xl'>
-        ${price}
+        ${precio}
       </Text>
     </Stack>
   </CardBody>
