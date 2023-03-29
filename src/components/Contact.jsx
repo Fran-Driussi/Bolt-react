@@ -88,7 +88,7 @@ return (
         </label>
       </fieldset>
       <div className="submitCard">
-        <button type='submit'>Complete payment</button>
+        <button type='submit'>Complete payment: ${totalCart()} </button>
         
       </div>
     </form>
