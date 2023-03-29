@@ -16,15 +16,9 @@ const ItemDetailContainer = () => {
       if (snapshot.exists()){
         const docs = snapshot.data();
         setProducts(docs);
-        
       }
     })
-  })
-
-
-
-
-  
+  },[id])
   return (
     <>
     <ItemDetail products={products}/>

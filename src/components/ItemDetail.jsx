@@ -8,17 +8,16 @@ import {
   Heading,
   Text,
   CardFooter,
-  Spinner,
   CircularProgress
 } from "@chakra-ui/react";
 import { ChakraProvider } from '@chakra-ui/react';
-import { useParams } from "react-router-dom";
+
 import ItemCount from './ItemCount';
 import { useState, useEffect } from 'react';
 
 
 const ItemDetail = ({ products }) => {
-  console.log(products);
+  
 
 const [loading, setLoading] = useState(false);
 
@@ -34,7 +33,7 @@ const [loading, setLoading] = useState(false);
       {loading ? (
         <div>
           
-            <div key={id}>
+            
 
               <Card
                 direction={{ base: 'column', sm: 'row' }}
@@ -45,33 +44,33 @@ const [loading, setLoading] = useState(false);
                 <Image
                   className='image-prod'
 
-                  src={Imagen}
+                  src={products.Imagen}
 
                 />
 
                 <Stack>
                   <CardBody>
-                    <Heading size='md'>{Nombre}</Heading>
+                    <Heading size='md'>{products.Nombre}</Heading>
 
                     <Text py='2'>
-                      {Descpricion}
+                      {products.Descripcion}
                     </Text>
                     <Text color="blue.400" fontSize="xl">
-                      Category: {Categoria}
+                      Category: {products.Categoria}
                     </Text>
                     <Text color="orange.300" fontSize="xl">
-                      Stock: {Stock}
+                      Stock: {products.Stock}
                     </Text>
                     <Text color="green.600" fontSize="xl">
-                      Price: ${Precio}
+                      Price: ${products.Precio}
                     </Text>
                   </CardBody>
 
                   <CardFooter>
-                    <ItemCount id={id}
-                      name={Nombre}
-                      price={Precio}
-                      stock={Stock} />
+                    <ItemCount id={products.id}
+                      name={products.Nombre}
+                      price={products.Precio}
+                      stock={products.Stock} />
 
 
 
@@ -81,7 +80,7 @@ const [loading, setLoading] = useState(false);
               </Card>
             </div>
           
-        </div>
+        
       ) : (
         <div className='spinner' >
           <CircularProgress isIndeterminate size='100px' thickness='10px' color='gray.400' />

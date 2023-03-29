@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Box, Image, CircularProgress, Flex, Text, Spacer } from "@chakra-ui/react";
+import { Center, Box, Image} from "@chakra-ui/react";
 import { useEffect, useState } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 const Welcome = () => {

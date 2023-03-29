@@ -65,7 +65,7 @@ const Cart = () => {
                         Cantidad: {prod.cantidad}
                       </Text>
                       <Text color="green.600" fontSize="xl">
-                        Price: ${prod.price}
+                        Price p/u: ${prod.price}
                       </Text>
                       <Text fontSize="xl">
                         Total: ${prod.price * prod.cantidad}
@@ -86,7 +86,7 @@ const Cart = () => {
         {cart != 0 ? (
           <Box className='count'>
 
-            <Link to={"/contact"}><Button variant='solid' colorScheme='blue' onClick={() => nullCart()}>Finalizar compra:  ${totalCart()} </Button></Link>
+            <Link to={"/contact"}><Button variant='solid' colorScheme='blue' >Finalizar compra:  ${totalCart()} </Button></Link>
 
             <Button variant='solid' colorScheme='red' onClick={() => nullCart()} >Vaciar carrito</Button>
           </Box>

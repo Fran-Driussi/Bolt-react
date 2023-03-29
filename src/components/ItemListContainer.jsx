@@ -16,19 +16,16 @@ useEffect(()=>{
   getDocs(itemsCollection).then((snapshot)=>{
     const docs = snapshot.docs.map((doc)=> doc.data())
     setProducts(docs);
-    console.log(docs)
+    
   })
 
 }, [])
-
-
   
+const catFilter= products.filter((prod)=> prod.Categoria === Categoria)
 
- 
-  
   return (
     <>
-    <ItemList products={products}/>
+      {Categoria? <ItemList products={catFilter}/> :   <ItemList products={products}/>}
   
   </>
   )
