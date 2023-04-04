@@ -25,14 +25,7 @@ const Contact = () => {
     cardNumber,
     cart
    
-    
   };
-
-  
-
-
-
-
 return (
   <>
     <form className="form" onSubmit={handleSubmit}>
